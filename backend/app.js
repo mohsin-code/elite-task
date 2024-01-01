@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
+const router = require("./routes");
 const app = express();
 
 // Handle Uncaught Exceptions
@@ -17,6 +18,9 @@ app.use(express.urlencoded({
 
 app.use(cors());
 app.use(helmet());
+
+// Routes
+app.use("/api", router);
 
 // Catch 404
 app.use((req, res) => {
