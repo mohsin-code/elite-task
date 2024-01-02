@@ -9,7 +9,7 @@ require('dotenv').config({
 module.exports = {
   env: process.env.NODE_ENV,
   port: process.env.PORT,
-  sql: {
+  db: {
     host: process.env.SQL_HOST,
     user: process.env.SQL_USER,
     password: process.env.SQL_PASSWORD,
