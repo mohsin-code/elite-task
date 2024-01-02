@@ -20,6 +20,12 @@ const checkConn = async () => {
   } catch (error) {
     console.error('Unable to connect to the database:', error)
   }
+
+  sequelize.sync().then(() => {
+    console.log('Tables synced successfully!');
+  }).catch((error) => {
+    console.error('Unable to create table : ', error)
+  })
 }
 
 checkConn()
