@@ -1,5 +1,5 @@
-const sequelize = require('../config/db');
-const { DataTypes } = require('sequelize');
+const sequelize = require('../config/db')
+const { DataTypes } = require('sequelize')
 
 // Create a Model for the data of all the Sankeys
 const Products = sequelize.define('products', {
@@ -23,6 +23,6 @@ const Products = sequelize.define('products', {
 }, {
   tableName: 'products',
   timestamps: false
-});
+})
 
-module.exports = Products;
+module.exports = Products

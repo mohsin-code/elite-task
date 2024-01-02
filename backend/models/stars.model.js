@@ -1,7 +1,7 @@
-const sequelize = require('../config/db');
-const { DataTypes } = require('sequelize');
-const Products = require('./products.model');
-const Users = require('./users.model');
+const sequelize = require('../config/db')
+const { DataTypes } = require('sequelize')
+const Products = require('./products.model')
+const Users = require('./users.model')
 
 // Create a Model for the data of all the Sankeys
 const Stars = sequelize.define('stars', {
@@ -26,9 +26,9 @@ const Stars = sequelize.define('stars', {
 }, {
   tableName: 'stars',
   timestamps: true
-});
+})
 
-Stars.belongsTo(Products, { foreignKey: 'product_id' });
-Stars.belongsTo(Users, { foreignKey: 'user_id' });
+Stars.belongsTo(Products, { foreignKey: 'product_id' })
+Stars.belongsTo(Users, { foreignKey: 'user_id' })
 
-module.exports = Stars;
+module.exports = Stars

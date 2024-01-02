@@ -22,7 +22,7 @@ const checkConn = async () => {
   }
 
   sequelize.sync().then(() => {
-    console.log('Tables synced successfully!');
+    console.log('Tables synced successfully!')
   }).catch((error) => {
     console.error('Unable to create table : ', error)
   })

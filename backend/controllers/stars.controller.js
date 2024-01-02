@@ -1,6 +1,6 @@
-const Products = require('../models/products.model');
-const Stars = require('../models/stars.model');
-const Users = require('../models/users.model');
+const Products = require('../models/products.model')
+const Stars = require('../models/stars.model')
+const Users = require('../models/users.model')
 
 module.exports = {
   list: async (req, res) => {
@@ -9,17 +9,17 @@ module.exports = {
         include: [
           {
             model: Products,
-            attributes: ['name'],
+            attributes: ['name']
           },
           {
             model: Users,
-            attributes: ['name', 'email'],
-          },
+            attributes: ['name', 'email']
+          }
         ],
-        attributes: ['stars'],
-      });
+        attributes: ['stars']
+      })
 
-      return res.status(200).json(starsWithDetails);
+      return res.status(200).json(starsWithDetails)
     } catch (err) {
       console.log(err)
       return res
